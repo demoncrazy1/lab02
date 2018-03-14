@@ -1,0 +1,77 @@
+//LOW«G HIGH¤£«G
+const byte a[]={12,2,3,4,5,8,9,10,11};
+//const byte startpin=2;
+//const byte endpin=9;
+byte i;
+void setup()
+{
+  for(i=0;i<=8;i++)
+  {
+    pinMode(a[i],OUTPUT);
+  }
+}
+
+
+void loop()
+{
+  for(i=0;i<2;i++)
+  {
+ digitalWrite(a[8],LOW);
+  digitalWrite(a[1],LOW);
+  digitalWrite(a[2],LOW);
+  digitalWrite(a[3],LOW);
+  digitalWrite(a[4],LOW);
+  digitalWrite(a[5],LOW);
+  digitalWrite(a[6],LOW);
+  digitalWrite(a[7],LOW);
+ delay(1000);
+ digitalWrite(a[8],HIGH);
+  digitalWrite(a[1],HIGH);
+  digitalWrite(a[2],HIGH);
+  digitalWrite(a[3],HIGH);
+  digitalWrite(a[4],HIGH);
+  digitalWrite(a[5],HIGH);
+  digitalWrite(a[6],HIGH);
+  digitalWrite(a[7],HIGH);
+  delay(1000);
+  }
+  
+  for(i=1;i<9;i++)
+  {
+    digitalWrite(a[i],LOW);
+    delay(100);
+    digitalWrite(a[i],HIGH);
+    delay(100);
+      
+  }
+  
+  for(i=0;i<2;i++)
+  {
+  digitalWrite(a[8],LOW);
+  digitalWrite(a[1],LOW);
+  digitalWrite(a[2],LOW);
+  digitalWrite(a[3],LOW);
+  digitalWrite(a[4],LOW);
+  digitalWrite(a[5],LOW);
+  digitalWrite(a[6],LOW);
+  digitalWrite(a[7],LOW);
+ delay(1000);
+  digitalWrite(a[1],HIGH);
+  digitalWrite(a[8],HIGH);
+  digitalWrite(a[2],HIGH);
+  digitalWrite(a[3],HIGH);
+  digitalWrite(a[4],HIGH);
+  digitalWrite(a[5],HIGH);
+  digitalWrite(a[6],HIGH);
+  digitalWrite(a[7],HIGH);
+  delay(1000);
+  }
+  
+  for(i=8;i>0;i--)
+  {
+    digitalWrite(a[i],LOW);
+    delay(100);
+    digitalWrite(a[i],HIGH);
+    delay(100);
+ }
+}
